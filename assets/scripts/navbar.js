@@ -1,14 +1,38 @@
+/*
+* Code taken from https://codepen.io/themrsami/pen/YPzvmyY, removing what I don't need
+*/
 
-// code taken from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
-/* Toggle between adding and removing the "responsive" class to navbar when the user clicks on the icon */
+document.addEventListener('DOMContentLoaded', () => {
+    // Elements
+    const navbar = document.querySelector('.navbar');
+    const navToggle = document.querySelector('.nav-toggle');
 
-const myFunction = () => {
-  const x = document.getElementById("container-links");
+    // Mobile menu toggle with animation
+    navToggle.addEventListener('click', () => {
+        navbar.classList.toggle('nav-active');
 
-  if (x.className === "navbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navbar";
-  }
+        // Prevent scrolling when menu is open
+        if (navbar.classList.contains('nav-active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
 
-}
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbar.contains(e.target) && navbar.classList.contains('nav-active')) {
+            navbar.classList.remove('nav-active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 968) {
+            navbar.classList.remove('nav-active');
+            document.body.style.overflow = '';
+        }
+    });
+
+});
