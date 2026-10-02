@@ -1,10 +1,9 @@
 .hero {
-    min-height: 60vh;
+    min-height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 1.5rem;
-
+    padding: 4rem 1.5em;
     background:
         linear-gradient(
             rgba(0, 0, 0, 0.45),
@@ -16,7 +15,7 @@
 }
 
 .hero-content {
-    width: min(100%, 900px);
+    width: min(100%, 56.25rem);
     text-align: center;
 }
 
@@ -33,7 +32,21 @@
     line-height: 1.05;
 }
 
-.hero-banner__content > p {
-    max-width: 650px;
+.hero-content > p {
+    max-width: 40.625;
     margin-inline: auto;
+}
+
+/* experience button */
+.container-btn {
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
 }
