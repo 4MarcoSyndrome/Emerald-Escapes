@@ -265,3 +265,7 @@ footer a {
 .theme-toggle:hover {
     font-size: 1.8em;
 }
+
+.hidden {
+    display: none;
+}

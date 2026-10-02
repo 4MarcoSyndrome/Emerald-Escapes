@@ -1,7 +1,7 @@
 // Theme toggle with enhanced transitions
 const toggleButton = document.getElementById("toggle-dark");
-const sunIcon = '.fa-sun';
-const moonIcon = '.fa-moon';
+const sunIcon = document.getElementById("sun");
+const moonIcon = document.getElementById("moon");
 
 let isDark = false; // Default light theme
 
@@ -15,8 +15,8 @@ toggleButton.addEventListener('click', () => {
         );
 
         // Switch icons
-        toggleButton.children.classList.add(sunIcon);
-        sunIcon.classList.remove(moonIcon);
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
     } else {
         // Switch to light theme
         transformToTheme(
@@ -24,8 +24,8 @@ toggleButton.addEventListener('click', () => {
         );
 
         // Switch icons
-        toggleButton.children.classList.add(moonIcon);
-        toggleButton.children.classList.remove(sunIcon);
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
     }
 });
 
