@@ -4,6 +4,7 @@ const sunIcon = document.getElementById("sun");
 const moonIcon = document.getElementById("moon");
 
 if (toggleButton && sunIcon && moonIcon) {
+
     const setTheme = (isDark) => {
         document.documentElement.classList.toggle("dark", isDark);
         sunIcon.classList.toggle("hidden", isDark);
@@ -17,5 +18,18 @@ if (toggleButton && sunIcon && moonIcon) {
         setTheme(isDark);
     });
 
-    setTheme(false);
+    let getDark = localStorage.getItem("dark");
+
+    let setDark;
+
+    if (getDark !== "on") {
+        setTheme(false);
+        // Set the value of the item to "on" when dark mode is on
+        setDark = localStorage.setItem('dark', 'on');
+    } else {
+        setTheme(true);
+        setDark = localStorage.setItem('dark', null);
+    }
+
 }
+

@@ -229,7 +229,7 @@ main {
 .theme-toggle {
     margin-top: 0.5rem;
     padding: 0.5rem 0.75rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--secondary-color);
     border-radius: var(--border-radius);
     background: var(--primary-bg-color);
     color: var(--text-color);
@@ -240,6 +240,9 @@ main {
 
 .theme-toggle:hover {
     transform: translateY(-1px);
+    font-size: 2rem;
+    background: rgba(0, 154, 68, 0.08);
+
 }
 
 .hidden {
@@ -348,4 +351,5 @@ footer small {
     .theme-toggle {
         margin-top: 0;
     }
+
 }
