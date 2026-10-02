@@ -1,38 +1,41 @@
 /*
-* Code taken from https://codepen.io/themrsami/pen/YPzvmyY, removing what I don't need
-*/
-
+ * Mobile navigation behaviour.
+ */
 document.addEventListener('DOMContentLoaded', () => {
-    // Elements
     const navbar = document.querySelector('.navbar');
     const navToggle = document.querySelector('.nav-toggle');
 
-    // Mobile menu toggle with animation
-    navToggle.addEventListener('click', () => {
-        navbar.classList.toggle('nav-active');
+    if (!navbar || !navToggle) return;
 
-        // Prevent scrolling when menu is open
-        if (navbar.classList.contains('nav-active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
+    const closeMenu = () => {
+        navbar.classList.remove('nav-active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation');
+        document.body.style.overflow = '';
+    };
+
+    navToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+
+        const isOpen = navbar.classList.toggle('nav-active');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!navbar.contains(event.target) && navbar.classList.contains('nav-active')) {
+            closeMenu();
         }
     });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navbar.contains(e.target) && navbar.classList.contains('nav-active')) {
-            navbar.classList.remove('nav-active');
-            document.body.style.overflow = '';
-        }
+    document.querySelectorAll('.nav-link').forEach((link) => {
+        link.addEventListener('click', closeMenu);
     });
 
-    // Handle window resize
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 968) {
-            navbar.classList.remove('nav-active');
-            document.body.style.overflow = '';
+        if (window.innerWidth >= 969) {
+            closeMenu();
         }
     });
-
 });

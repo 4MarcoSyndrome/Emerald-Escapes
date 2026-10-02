@@ -1,0 +1,39 @@
+.hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("/assets/images/saad-chaudhry-Xm5jDcBv_oE-unsplash.jpg") center / cover no-repeat;
+
+    color: #fff;
+}
+
+.hero-content {
+    width: min(100%, 900px);
+    text-align: center;
+}
+
+.eyebrow {
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.hero-banner h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+}
+
+.hero-banner__content > p {
+    max-width: 650px;
+    margin-inline: auto;
+}

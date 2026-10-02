@@ -1,41 +1,21 @@
-// Theme toggle with enhanced transitions
+// Theme toggle
 const toggleButton = document.getElementById("toggle-dark");
 const sunIcon = document.getElementById("sun");
 const moonIcon = document.getElementById("moon");
 
-let isDark = false; // Default light theme
+if (toggleButton && sunIcon && moonIcon) {
+    const setTheme = (isDark) => {
+        document.documentElement.classList.toggle("dark", isDark);
+        sunIcon.classList.toggle("hidden", isDark);
+        moonIcon.classList.toggle("hidden", !isDark);
+        toggleButton.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+        toggleButton.setAttribute("aria-pressed", String(isDark));
+    };
 
-toggleButton.addEventListener('click', () => {
-    isDark = !isDark;
+    toggleButton.addEventListener("click", () => {
+        const isDark = !document.documentElement.classList.contains("dark");
+        setTheme(isDark);
+    });
 
-    if (isDark) {
-        // Switch to dark theme
-        transformToTheme(
-            '#2f4858'
-        );
-
-        // Switch icons
-        sunIcon.classList.add('hidden');
-        moonIcon.classList.remove('hidden');
-    } else {
-        // Switch to light theme
-        transformToTheme(
-            '#ffffff'
-        );
-
-        // Switch icons
-        moonIcon.classList.add('hidden');
-        sunIcon.classList.remove('hidden');
-    }
-});
-
-// Helper function for smooth theme transition
-const transformToTheme = (bgColor) => {
-    document.documentElement.style.setProperty('--primary-bg-color', bgColor);
-
-    // Add transition class to body for smooth color changes
-    document.body.classList.add('theme-transition');
-    setTimeout(() => {
-        document.body.classList.remove('theme-transition');
-    }, 1000);
+    setTheme(false);
 }

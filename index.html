@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <menu name="Emerald Escapes" content="holiday, short breaks, travel experiences, Ireland">
+    <meta name="description" content="Emerald Escapes offers Irish holidays, short breaks and memorable travel experiences across Ireland.">
     <title>Emerald Escapes</title>
     <script src="https://kit.fontawesome.com/5633e3451f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/banner.css"/>
 </head>
 <body>
     <header class="header">
-
+        <!-- Navbar -->
         <nav class="navbar" aria-label="Main navigation">
             <div class="nav-brand">
                 <a class="logo" href="index.html" aria-label="Emerald Escapes home">
@@ -22,13 +23,13 @@
             </div>
 
             <!-- Hamburger that replace nav-menu on mobile -->
-            <div class="nav-toggle">
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
                 <div class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            </div>
+            </button>
 
             <div class="nav-menu">
                 <!-- links to section or other pages -->
@@ -37,10 +38,10 @@
                         <a href="index.html" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#our-story" class="nav-link">Our Story</a>
+                        <a href="index.html#our-story" class="nav-link">Our Story</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#overview" class="nav-link">Overview</a>
+                        <a href="index.html#overview" class="nav-link">Overview</a>
                     </li>
                     <li class="nav-item">
                         <a href="experiences.html" class="nav-link">Experiences</a>
@@ -62,10 +63,14 @@
     </header>
 
     <main>
-        <article class="container">
-            <section id="banner">
-
-            </section>
+        <article class="container-flex">
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="eyebrow">Locally loved. Wonderfully Irish.</p>
+                    <h1>Explore More.<br><em>Discover Ireland.</em></h1>
+                    <p>Handpicked holidays, short breaks and memorable experiences from the wild Atlantic coast to Ireland's lively cities.</p>
+                    <a class="btn btn-primary" href="experiences.html">Explore experiences <span>→</span></a>
+                </div>
             <section id="our-story">
 
             </section>
@@ -73,27 +78,24 @@
 
             </section>
         </article>
-        <aside>
-
-        </aside>
     </main>
 
     <footer>
-        <div class="row">
+        <div class="row footer-social">
             <!-- SOCIAL ICONS/LINKS -->
-                <a class="ic-fb" href="https://facebook.com" target="_blank" aria-label="Find me on Facebook" rel="noopener">
+                <a href="https://facebook.com" target="_blank" aria-label="Find me on Facebook" rel="noopener">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a class="ic-pin" href="https://pinterest.com" target="_blank" aria-label="Find me on Pinterest" rel="noopener">
+                <a href="https://pinterest.com" target="_blank" aria-label="Find me on Pinterest" rel="noopener">
                     <i class="fab fa-pinterest"></i>
                 </a>
-                <a class="ic-ins" href="https://instagram.com" target="_blank" aria-label="Find me on Instagram" rel="noopener">
+                <a href="https://instagram.com" target="_blank" aria-label="Find me on Instagram" rel="noopener">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a class="ic-twi" href="https://twitter.com" target="_blank" aria-label="Find me on Twitter" rel="noopener">
+                <a href="https://twitter.com" target="_blank" aria-label="Find me on Twitter" rel="noopener">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a class="ic-fl" href="https://www.youtube.com/" target="_blank" aria-label="Find me on Youtube" rel="noopener">
+                <a href="https://www.youtube.com/" target="_blank" aria-label="Find me on Youtube" rel="noopener">
                     <i class="fab fa-youtube"></i>
                 </a>
             <!-- COPYRIGHT -->
@@ -103,6 +105,7 @@
         </div>
     </footer>
 
+    <!-- scripts -->
     <script src="assets/scripts/navbar.js"></script>
     <script src="assets/scripts/darkmode.js"></script>
 
