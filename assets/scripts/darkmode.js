@@ -4,6 +4,7 @@ const sunIcon = document.getElementById("sun");
 const moonIcon = document.getElementById("moon");
 
 if (toggleButton && sunIcon && moonIcon) {
+
     const setTheme = (isDark) => {
         document.documentElement.classList.toggle("dark", isDark);
 

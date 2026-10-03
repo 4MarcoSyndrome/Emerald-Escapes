@@ -9,3 +9,7 @@ Deployed on [Git Pages](https://4marcosyndrome.github.io/Emerald-Escapes/)
 ## Navbar
 
 I used a code from codepen [Modern Glassmorphic Navigation Bar with Theme Toggle](https://codepen.io/themrsami/pen/YPzvmyY) adjusted with my requirements.
+
+## Colors
+
+Based on [Irish Flag](https://www.flagcolorcodes.com/ireland) official colors.
