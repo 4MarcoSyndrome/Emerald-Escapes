@@ -1,0 +1,158 @@
+/* Hero section */
+.hero {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5em;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("/assets/images/saad-chaudhry-Xm5jDcBv_oE-unsplash.jpg") center / cover no-repeat;
+
+    color: #fff;
+}
+
+.hero-content {
+    width: min(100%, 56.25rem);
+    text-align: center;
+}
+
+.hero-banner h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1.05;
+}
+
+.hero-content > p {
+    max-width: 40.625;
+    margin-inline: auto;
+}
+
+/* experience button */
+.container-btn {
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    padding: .625rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+.btn:hover {
+    padding: 15px;
+    font-weight: 600;
+}
+
+/* intro section */
+.intro {
+    padding: 1.25rem;
+    border-bottom: .2rem solid var(--primary-color);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: .8em;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0 0 15px;
+}
+
+.section-heading h2 em {
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+.intro-story {
+    margin-top: 20px;
+}
+
+.intro-story .text-link {
+    padding-top: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    border-bottom: 1px solid var(--gold);
+    text-decoration: underline solid var(--secondary-color) 2px;
+    text-underline-offset: 0.5em;
+}
+
+.section-heading {
+    width: fit-content;
+    justify-self: center;
+    text-align: left;
+}
+
+/* overview section */
+
+.category-grid {
+  max-width: 75rem;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.125rem;
+}
+
+.container-card {
+    justify-self: center;
+    margin-bottom: 1.5rem;
+}
+
+.category-card {
+    display: block;
+    background: var(--primary-bg-color);
+    padding: 2rem 1.7rem;
+    min-height: 13.125rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px var(--shadow-color);
+    background: rgba(0, 154, 68, 0.08);
+}
+
+.category-icon {
+  font-size: 2rem;
+}
+
+.category-card h3 {
+  margin: 1.1rem 0 .375rem;
+  font-size: 1.5em;
+  color: var(--text-color);
+}
+
+.category-card p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: .875em;
+}
+
+/* Desktop layout */
+@media (min-width: 60.563rem) {
+
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}

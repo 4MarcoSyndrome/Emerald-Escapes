@@ -1,0 +1,148 @@
+article,
+section {
+    margin-top: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.container-card {
+    padding: 0 4rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.mycard {
+    height: 20rem;
+    background: #d8f3ff;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    -webkit-box-shadow: 2px 2px 5px rgba(3, 74, 117, 0.2);
+    box-shadow: 2px 2px 5px rgba(3, 74, 117, 0.2);
+    min-width: 22.5rem;
+    max-width: 70rem;
+    margin: 2rem 0;
+}
+
+.mycard:hover {
+    height: 40rem;
+    -webkit-box-shadow: 5px 5px 10px rgba(3, 74, 117, 0.2);
+    box-shadow: 5px 5px 10px rgba(3, 74, 117, 0.2);
+    margin-bottom: 1rem;
+}
+
+.mycard .img-card {
+    height: 20rem;
+    width: 100%;
+}
+
+.mycard .img-card img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: .3rem;
+}
+
+.mycard .top-text {
+    padding: .5em;
+}
+
+.mycard .top-text .name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #034a75;
+    text-align: center;
+}
+
+.mycard .top-text p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #00bb2d;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.mycard .top-text p .fa-arrow-circle-down {
+    font-size: 2rem;
+}
+
+.mycard .bottom-text {
+    padding: 0 2rem 1rem 2rem;
+    margin-top: .5em;
+    background: #d8f3ff;
+    color: #034a75;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s;
+}
+
+.mycard:hover .bottom-text {
+    opacity: 1;
+    visibility: visible;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.mycard .bottom-text .text-card {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.mycard .bottom-text .btn-card {
+    margin: 1rem 0;
+}
+
+.mycard .bottom-text .btn-card a {
+    text-decoration: none;
+    background: #00bb2d;
+    color: #d8f3ff;
+    padding: .5em .8em;
+    border-radius: .3em;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+
+.mycard .bottom-text .btn-card p {
+    text-align: center;
+    color: #00bb2d;
+}
+
+.mycard .bottom-text .btn-card a:hover {
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+}
+
+@media screen and (min-width: 38.125em) {
+    .mycard {
+        max-width: 22.5rem;
+    }
+    .mycard .top-text p .fa-arrow-circle-down {
+        font-size: 1.6rem;
+    }
+}

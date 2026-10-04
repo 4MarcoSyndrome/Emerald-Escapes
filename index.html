@@ -6,8 +6,10 @@
     <meta name="description" content="Emerald Escapes offers Irish holidays, short breaks and memorable travel experiences across Ireland.">
     <title>Emerald Escapes</title>
     <script src="https://kit.fontawesome.com/5633e3451f.js" crossorigin="anonymous"></script>
+    <!-- style common to all pages -->
     <link rel="stylesheet" href="assets/css/styles.css"/>
-    <link rel="stylesheet" href="assets/css/banner.css"/>
+    <!-- style specific for the homepage -->
+    <link rel="stylesheet" href="assets/css/home.css"/>
 </head>
 <body>
     <header class="header">
@@ -75,23 +77,62 @@
                     </div>
                 </div>
             </section>
+            <!-- Emerald Escapes story section -->
             <section id="our-story" class="intro">
-                <div class="intro-heading">
+                <!-- header -->
+                <div class="section-heading">
                     <p class="eyebrow">Our story</p>
                     <h2>Small moments.<br><em>Big Irish memories.</em></h2>
                 </div>
+                <!-- story -->
                 <div class="intro-story">
-                    <p>Emerald Escapes was created for curious travellers who want to see Ireland beyond the obvious. We pair local knowledge with beautifully simple itineraries, making it easy to enjoy a weekend away, a family adventure or a once-in-a-lifetime discovery.</p>
+                    <p>Emerald Escapes was created for curious travelers who want to see Ireland beyond the obvious. We pair local knowledge with beautifully simple itineraries, making it easy to enjoy a weekend away, a family adventure or a once-in-a-lifetime discovery.</p>
                     <p>From Galway music nights and Dublin culture to sea cliffs, island trails and cosy countryside stays, every escape is chosen for character, connection and that unmistakable Irish welcome.</p>
                     <a class="text-link" href="contact.html">Tell us what you're dreaming of <span>↗</span></a>
                 </div>
             </section>
+            <!-- overview of some experiences with redirect to filtered category in experiences page -->
             <section id="overview">
-
+                <!-- header -->
+                <div class="section-heading centered">
+                    <p class="eyebrow">Find your escape</p>
+                    <h2>Something for every <em>kind of traveler</em></h2>
+                </div>
+                <!-- cards -->
+                <div class="category-grid">
+                    <div class="container-card">
+                        <a class="category-card" href="experiences.html?category=City">
+                            <span class="category-icon">
+                                <i class="fa-solid fa-city"></i>
+                            </span>
+                            <h3>City breaks</h3>
+                            <p>Culture, food and late-night stories.</p>
+                        </a>
+                    </div>
+                    <div class="container-card">
+                        <a class="category-card" href="experiences.html?category=Coastal">
+                            <span class="category-icon">
+                                <i class="fa-solid fa-water"></i>
+                            </span>
+                            <h3>Coastal adventures</h3>
+                            <p>Cliffs, islands and Atlantic air.</p>
+                        </a>
+                    </div>
+                    <div class="container-card">
+                        <a class="category-card" href="experiences.html?category=Countryside">
+                            <span class="category-icon">
+                                <i class="fa-solid fa-tree"></i>
+                            </span>
+                            <h3>Countryside escapes</h3>
+                            <p>Slow days, green lanes and cosy stays.</p>
+                        </a>
+                    </div>
+                </div>
             </section>
         </article>
     </main>
 
+    <!-- footer with social links and Copyright -->
     <footer>
         <div class="row footer-social">
             <!-- SOCIAL ICONS/LINKS -->
@@ -113,7 +154,7 @@
             <!-- COPYRIGHT -->
         </div>
         <div class="row">
-            <small>Copyright 2026 © Emerald</small>
+            <small>Copyright 2026 © Emerald Escapes</small>
         </div>
     </footer>
 

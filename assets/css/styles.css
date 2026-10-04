@@ -12,7 +12,6 @@
     --shadow-color: rgba(0, 0, 0, .12);
     --neon-glow: 0 0 12px rgba(0, 154, 68, .25);
     --border-radius: 12px;
-    --container-width: 75rem;
 }
 
 .dark {
@@ -288,45 +287,6 @@ footer small {
     text-align: center;
 }
 
-/* intro section */
-.intro {
-    padding: 20px;
-}
-
-.eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-size: .8em;
-    font-style: italic;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin: 0 0 15px;
-}
-
-.intro-heading h2 em {
-    color: var(--primary-color);
-    font-style: italic;
-}
-
-.intro-story {
-    margin-top: 20px;
-}
-
-.intro-story .text-link {
-    padding-top: 1rem;
-    color: var(--primary-color);
-    font-weight: 700;
-    border-bottom: 1px solid var(--gold);
-    text-decoration: underline solid var(--secondary-color) 2px;
-    text-underline-offset: 0.5em;
-}
-
-.intro-heading {
-    width: fit-content;
-    justify-self: center;
-    text-align: left;
-}
-
 /* Desktop layout */
 @media (min-width: 60.563rem) {
     /* Navbar */
@@ -392,12 +352,5 @@ footer small {
         margin-top: 0;
     }
 
-    .intro {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-
 }
-
 
