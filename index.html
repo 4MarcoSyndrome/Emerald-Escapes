@@ -67,7 +67,7 @@
     <main>
         <article class="container-flex">
             <!-- banner section  -->
-            <section class="hero">
+            <section class="hero" role="img" aria-label="Cliffs of Moher photo in background, author Saad Chaudhry">
                 <div class="hero-content">
                     <p class="eyebrow">Locally loved. Wonderfully Irish.</p>
                     <h1>Explore More.<br><em>Discover Ireland.</em></h1>
@@ -151,10 +151,19 @@
                 <a href="https://www.youtube.com/" target="_blank" aria-label="Find me on Youtube" rel="noopener">
                     <i class="fab fa-youtube"></i>
                 </a>
-            <!-- COPYRIGHT -->
         </div>
         <div class="row">
-            <small>Copyright 2026 © Emerald Escapes</small>
+            <!-- COPYRIGHT -->
+            <small>
+                Copyright ©
+                <span id="current-year">
+                    <!-- the year will update automatically with the current year -->
+                    <script>
+                        document.getElementById("current-year").textContent = new Date().getFullYear()
+                    </script>
+                </span>
+                Emerald Escapes
+            </small>
         </div>
     </footer>
 

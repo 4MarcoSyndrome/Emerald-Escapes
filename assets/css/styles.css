@@ -1,4 +1,6 @@
 /* Emerald Escapes */
+
+/* set variables */
 :root {
     --primary-color: #009a44;
     --primary-bg-color: #ffffff;
@@ -28,7 +30,6 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -44,6 +45,10 @@ body {
     transition: background-color var(--transition-medium), color var(--transition-medium);
 }
 
+/*
+    in display flex container when there are main and footer,
+    this allow the footer to sit on the bottom of the page
+*/
 main {
     flex: 1;
 }

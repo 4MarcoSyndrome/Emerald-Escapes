@@ -89,8 +89,18 @@
                 </a>
             <!-- COPYRIGHT -->
         </div>
-        <div class="row">
-            <small>Copyright 2026 © Emerald Emerald Escapes</small>
+         <div class="row">
+            <!-- COPYRIGHT -->
+            <small>
+                Copyright ©
+                <span id="current-year">
+                    <!-- the year will update automatically with the current year -->
+                    <script>
+                        document.getElementById("current-year").textContent = new Date().getFullYear()
+                    </script>
+                </span>
+                Emerald Escapes
+            </small>
         </div>
     </footer>
 

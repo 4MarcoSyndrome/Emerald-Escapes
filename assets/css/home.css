@@ -93,7 +93,6 @@
 }
 
 /* overview section */
-
 .category-grid {
   max-width: 75rem;
   margin: 2rem;
@@ -144,15 +143,17 @@
 /* Desktop layout */
 @media (min-width: 60.563rem) {
 
+    /* show the 2 div in 2 column */
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
 
+    /* show the 3 category on the same line, centered to the user view */
     .category-grid {
         grid-template-columns: repeat(3, 1fr);
-
+        justify-self: center;
     }
 
 }
