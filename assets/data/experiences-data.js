@@ -82,7 +82,7 @@ const EXPERIENCES_XML = `
         <location>County Kerry</location>
         <days>3 days</days>
         <price>399</price>
-        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Skellig_Islands.jpg</image>
+        <image>https://upload.wikimedia.org/wikipedia/commons/6/61/Skellig_Michael_2014.JPG</image>
         <description>Boat trips, ancient monastic ruins and dramatic Atlantic island scenery off the Kerry coast.</description>
     </destination>
     <destination>
@@ -100,7 +100,7 @@ const EXPERIENCES_XML = `
         <location>County Galway</location>
         <days>3 days</days>
         <price>339</price>
-        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Aran_Islands.jpg</image>
+        <image>https://upload.wikimedia.org/wikipedia/commons/6/62/Aran_Islands_Inishmore_Ireland.jpg</image>
         <description>Stone walls, Gaelic culture, coastal cycle routes and dramatic views over Galway Bay.</description>
     </destination>
     <destination>
@@ -109,7 +109,7 @@ const EXPERIENCES_XML = `
         <location>County Mayo</location>
         <days>3 days</days>
         <price>349</price>
-        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Westport_County_Mayo.jpg</image>
+        <image>https://upload.wikimedia.org/wikipedia/commons/1/1e/Westport_-_Westport_House_-_20161229132327.jpg</image>
         <description>A charming town base for Croagh Patrick, Clew Bay and the wild Mayo coastline.</description>
     </destination>
     <destination>
