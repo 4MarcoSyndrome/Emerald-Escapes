@@ -21,7 +21,11 @@ form.addEventListener("submit", function (event) {
     }
 
     // Check email format
-    if (!email.includes("@") || !email.includes(".")) {
+    // code taken from https://medium.com/@sketch.paintings/email-validation-with-javascript-regex-e1b40863ed23
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const isValidEmail = emailRegex.test(email);
+
+    if (isValidEmail) {
         feedback.textContent = "Please enter a valid email address.";
         feedback.className = "form-feedback error";
         feedback.hidden = false;
