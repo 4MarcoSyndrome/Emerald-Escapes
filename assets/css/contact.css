@@ -307,8 +307,8 @@ select.form-control {
 }
 
 .submit-button:hover {
-    background: #007c36;
-    border-color: #007c36;
+    background: var(--primary-color);
+    border-color: var(--border-color);
     box-shadow: var(--neon-glow);
     transform: translateY(-0.125rem);
 }

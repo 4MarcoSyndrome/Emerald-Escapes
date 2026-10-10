@@ -1,15 +1,17 @@
-/* Emerald Escapes - Experiences page
-   Loads destinations from experiences.xml, builds the cards
-   and filters them by search text, category and maximum price. */
+/* Experiences page:
+*  Loads destinations from experiences.xml,
+*  builds the cards
+*  and filters them by search text, category and maximum price.
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
     "use strict";
 
-    // ---------- Settings ----------
+    // constants
     const XML_PATH = "assets/data/experiences.xml";
     const FALLBACK_IMAGE = "assets/images/pngtree-no-image-available.jpg";
 
-    // ---------- Page elements ----------
+    // Page elements
     const grid = document.getElementById("experience-grid");
     const searchInput = document.getElementById("search-input");
     const priceRange = document.getElementById("price-range");
@@ -25,8 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
         search: "",
         maxPrice: Infinity
     };
-
-    // ---------- Helpers ----------
 
     // Create an element with an optional class and text
     const createEl = (tag, className, text) => {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return wrapper;
     }
 
-    // ---------- Build one card ----------
+    // Build one card
     const buildCard = (dest) => {
         const card = createEl("article", "experience-card");
 
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return card;
     }
 
-    // ---------- Apply the filters ----------
+    // Apply the filters
     const applyFilters = () => {
         const cards = grid.querySelectorAll(".experience-card");
         let visible = 0;
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         noResults.classList.toggle("hidden", visible !== 0);
     }
 
-    // ---------- Set up the price slider from the data ----------
+    // Set up the price slider from the data
     const setupPriceSlider = (destinations) => {
         const prices = destinations.map(d => d.price);
         const min = Math.floor(Math.min(...prices) / 50) * 50;
@@ -130,7 +130,24 @@ document.addEventListener("DOMContentLoaded", () => {
         priceOutput.textContent = "€" + max;
     }
 
-    // ---------- Event listeners ----------
+    // Take the category filtered in the URL
+    const applyCategoryFromUrl = () => {
+        const params = new URLSearchParams(window.location.search);
+        const requested = params.get("category");
+        if (!requested) return;
+
+        // Check if the category is one of the 3 available: Coastal, City, Countryside
+        const match = Array.from(categoryButtons).find(
+            button => button.dataset.category.toLowerCase() === requested.toLowerCase()
+        );
+        if (!match) return;
+
+        categoryButtons.forEach(b => b.classList.remove("active"));
+        match.classList.add("active");
+        filters.category = match.dataset.category;
+    }
+
+    // Event listeners
     const setupEvents = () => {
         // Live text search
         searchInput.addEventListener("input", () => {
@@ -169,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ---------- Load the XML and start ----------
+    // Load the XML and start
     async function loadExperiences() {
         try {
             const response = await fetch(XML_PATH);
@@ -194,12 +211,12 @@ document.addEventListener("DOMContentLoaded", () => {
             destinations.forEach(dest => grid.appendChild(buildCard(dest)));
             setupPriceSlider(destinations);
             setupEvents();
+            applyCategoryFromUrl();
             applyFilters();
         } catch (error) {
             console.error("Could not load experiences:", error);
             grid.replaceChildren(createEl("p", "load-error",
-                "Sorry, the experiences could not be loaded. " +
-                "If you opened the file directly, run the site with a local server (e.g. VS Code Live Server)."));
+                "Sorry, the experiences could not be loaded. "));
         }
     }
 
