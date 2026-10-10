@@ -1,0 +1,143 @@
+/* Emerald Escapes - experiences data
+   The XML is stored in a JavaScript string so the site works when opened
+   directly from the folder (file://), where fetch() is blocked by browsers. */
+
+const EXPERIENCES_XML = `
+<destinations>
+    <destination>
+        <name>Cliffs of Moher Escape</name>
+        <category>Coastal</category>
+        <location>County Clare</location>
+        <days>3 days</days>
+        <price>329</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Cliffs_of_Moher,_Burren,_Ireland.jpg</image>
+        <description>Atlantic views, cliff walks and a cosy base in County Clare.</description>
+    </destination>
+    <destination>
+        <name>Killarney Lakes and Mountains</name>
+        <category>Countryside</category>
+        <location>County Kerry</location>
+        <days>4 days</days>
+        <price>429</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Killarney_National_Park.jpg</image>
+        <description>Lakes, woodland trails, Muckross House and the scenery of Killarney National Park.</description>
+    </destination>
+    <destination>
+        <name>Giant’s Causeway Adventure</name>
+        <category>Coastal</category>
+        <location>County Antrim</location>
+        <days>2 days</days>
+        <price>249</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Giant's_Causeway.jpg</image>
+        <description>Volcanic basalt columns, dramatic sea views and the Causeway Coastal Route.</description>
+    </destination>
+    <destination>
+        <name>Connemara Wild Escape</name>
+        <category>Countryside</category>
+        <location>County Galway</location>
+        <days>3 days</days>
+        <price>359</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Connemara.jpg</image>
+        <description>Wild mountains, quiet villages and sweeping views in one of Ireland’s most scenic regions.</description>
+    </destination>
+    <destination>
+        <name>Dingle Peninsula Discovery</name>
+        <category>Coastal</category>
+        <location>County Kerry</location>
+        <days>4 days</days>
+        <price>449</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Dingle_Peninsula.jpg</image>
+        <description>Sea cliffs, sandy beaches, traditional music and the spectacular Slea Head Drive.</description>
+    </destination>
+    <destination>
+        <name>Ring of Kerry Road Trip</name>
+        <category>Countryside</category>
+        <location>County Kerry</location>
+        <days>5 days</days>
+        <price>549</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Ring_of_Kerry.jpg</image>
+        <description>A classic Irish road trip through mountains, lakes, coastal villages and panoramic viewpoints.</description>
+    </destination>
+    <destination>
+        <name>Dublin Culture Break</name>
+        <category>City</category>
+        <location>Dublin</location>
+        <days>3 days</days>
+        <price>299</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Dublin.jpg</image>
+        <description>History, museums, lively pubs and iconic attractions in Ireland’s capital city.</description>
+    </destination>
+    <destination>
+        <name>Rock of Cashel Heritage Tour</name>
+        <category>Countryside</category>
+        <location>County Tipperary</location>
+        <days>2 days</days>
+        <price>219</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Rock_of_Cashel.jpg</image>
+        <description>Medieval ruins, myth and sweeping views from one of Ireland’s most historic hilltop sites.</description>
+    </destination>
+    <destination>
+        <name>Skellig Islands Experience</name>
+        <category>Coastal</category>
+        <location>County Kerry</location>
+        <days>3 days</days>
+        <price>399</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Skellig_Islands.jpg</image>
+        <description>Boat trips, ancient monastic ruins and dramatic Atlantic island scenery off the Kerry coast.</description>
+    </destination>
+    <destination>
+        <name>The Burren and Poulnabrone</name>
+        <category>Countryside</category>
+        <location>County Clare</location>
+        <days>2 days</days>
+        <price>259</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/The_Burren.jpg</image>
+        <description>Limestone landscapes, rare wildflowers and ancient tombs on the Wild Atlantic Way.</description>
+    </destination>
+    <destination>
+        <name>Aran Islands Getaway</name>
+        <category>Coastal</category>
+        <location>County Galway</location>
+        <days>3 days</days>
+        <price>339</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Aran_Islands.jpg</image>
+        <description>Stone walls, Gaelic culture, coastal cycle routes and dramatic views over Galway Bay.</description>
+    </destination>
+    <destination>
+        <name>Westport and Clew Bay</name>
+        <category>Coastal</category>
+        <location>County Mayo</location>
+        <days>3 days</days>
+        <price>349</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Westport_County_Mayo.jpg</image>
+        <description>A charming town base for Croagh Patrick, Clew Bay and the wild Mayo coastline.</description>
+    </destination>
+    <destination>
+        <name>Cork and Blarney Castle</name>
+        <category>City</category>
+        <location>County Cork</location>
+        <days>3 days</days>
+        <price>319</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Blarney_Castle.jpg</image>
+        <description>City energy, historic castles and the famous Blarney Stone in Ireland’s south.</description>
+    </destination>
+    <destination>
+        <name>Donegal and Glenveagh Escape</name>
+        <category>Countryside</category>
+        <location>County Donegal</location>
+        <days>4 days</days>
+        <price>439</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Glenveagh_National_Park.jpg</image>
+        <description>Rugged mountains, remote beaches, Glenveagh Castle and untamed Donegal scenery.</description>
+    </destination>
+    <destination>
+        <name>Belfast and Titanic Quarter</name>
+        <category>City</category>
+        <location>County Antrim</location>
+        <days>3 days</days>
+        <price>309</price>
+        <image>https://commons.wikimedia.org/wiki/Special:FilePath/Titanic_Belfast.jpg</image>
+        <description>Maritime history, vibrant neighbourhoods and the story of the Titanic in Belfast.</description>
+    </destination>
+</destinations>
+`;

@@ -186,13 +186,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Load the XML and start
-    async function loadExperiences() {
+    // if the site is opened in a server use fetch
+    // in a local view fetch is blocked, so use experience-data.js
+    async function getXmlText() {
         try {
             const response = await fetch(XML_PATH);
             if (!response.ok) throw new Error("HTTP " + response.status);
+            return await response.text();
+        } catch (error) {
+            console.warn("fetch() failed, using embedded XML instead:", error.message);
+            return EXPERIENCES_XML.trim();
+        }
+    }
 
-            const xml = new DOMParser().parseFromString(await response.text(), "application/xml");
+    // Load the XML and start
+    async function loadExperiences() {
+        try {
+            const xmlText = await getXmlText();
+            const xml = new DOMParser().parseFromString(xmlText, "application/xml");
             if (xml.getElementsByTagName("parsererror").length) {
                 throw new Error("XML could not be parsed");
             }

@@ -10,7 +10,7 @@
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.45)
         ),
-        url("/assets/images/saad-chaudhry-Xm5jDcBv_oE-unsplash.webp") center / cover no-repeat;
+        url("../images/saad-chaudhry-Xm5jDcBv_oE-unsplash.webp") center / cover no-repeat;
 
     color: var(--primary-bg-color);
 }
