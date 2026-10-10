@@ -1,148 +1,237 @@
-article,
-section {
-    margin-top: 5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
+/* Page intro */
+.page-intro {
+    display: block;
+    margin: 2rem auto 1rem;
+    padding: 0 1rem;
+    max-width: 48rem;
+    text-align: center;
+}
+
+.page-intro h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Filter section */
+.filters {
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.container-card {
-    padding: 0 4rem;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
+    gap: 1.25rem;
+    max-width: 75rem;
+    margin: 1.5rem auto;
+    padding: 1.25rem;
+    background: var(--primary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 .25rem 1rem var(--shadow-color);
 }
 
-.mycard {
-    height: 20rem;
-    background: #d8f3ff;
-    -webkit-transition: .4s;
-    -o-transition: .4s;
-    transition: .4s;
-    -webkit-box-shadow: 2px 2px 5px rgba(3, 74, 117, 0.2);
-    box-shadow: 2px 2px 5px rgba(3, 74, 117, 0.2);
-    min-width: 22.5rem;
-    max-width: 70rem;
-    margin: 2rem 0;
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.mycard:hover {
-    height: 40rem;
-    -webkit-box-shadow: 5px 5px 10px rgba(3, 74, 117, 0.2);
-    box-shadow: 5px 5px 10px rgba(3, 74, 117, 0.2);
-    margin-bottom: 1rem;
+.filter-group label,
+.filter-label {
+    font-weight: 700;
+    color: var(--secondary-color);
 }
 
-.mycard .img-card {
-    height: 20rem;
+.filter-group input[type="search"] {
     width: 100%;
-}
-
-.mycard .img-card img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: .3rem;
-}
-
-.mycard .top-text {
-    padding: .5em;
-}
-
-.mycard .top-text .name {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #034a75;
-    text-align: center;
-}
-
-.mycard .top-text p {
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #00bb2d;
-    line-height: 2rem;
-    text-align: center;
-}
-
-.mycard .top-text p .fa-arrow-circle-down {
-    font-size: 2rem;
-}
-
-.mycard .bottom-text {
-    padding: 0 2rem 1rem 2rem;
-    margin-top: .5em;
-    background: #d8f3ff;
-    color: #034a75;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: .1s;
-    -o-transition: .1s;
-    transition: .1s;
-}
-
-.mycard:hover .bottom-text {
-    opacity: 1;
-    visibility: visible;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.mycard .bottom-text .text-card {
-    text-align: justify;
+    padding: 0.6rem 0.9rem;
     font-size: 1rem;
+    color: var(--text-color);
+    background: var(--primary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
-.mycard .bottom-text .btn-card {
-    margin: 1rem 0;
+.filter-group input[type="search"]:focus {
+    outline: 2px solid var(--primary-color);
 }
 
-.mycard .bottom-text .btn-card a {
-    text-decoration: none;
-    background: #00bb2d;
-    color: #d8f3ff;
-    padding: .5em .8em;
-    border-radius: .3em;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
+.filter-group input[type="range"] {
+    width: 100%;
+    accent-color: var(--primary-color);
+    cursor: pointer;
 }
 
-.mycard .bottom-text .btn-card p {
+/* Category buttons */
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-btn,
+.reset-btn {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 999px;
+    transition: all var(--transition-medium);
+}
+
+.filter-btn:hover,
+.reset-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 154, 68, 0.12);
+}
+
+.filter-btn.active {
+    color: #ffffff;
+    background: var(--primary-color);
+    box-shadow: var(--neon-glow);
+}
+
+.reset-btn {
+    align-self: flex-start;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.filter-actions {
+    gap: 0.75rem;
+}
+
+#results-count {
+    font-style: italic;
+}
+
+/*  Card grid  */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;          /* mobile: 1 column */
+    gap: 1.5rem;
+    max-width: 75rem;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+/* ---------- Single card ---------- */
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--primary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 .25rem 1rem var(--shadow-color);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+/* A display:flex rule would override the hidden attribute, so force it */
+.experience-card[hidden] {
+    display: none;
+}
+
+/* Hover effect: lift the card and zoom the image */
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 .75rem 2rem var(--shadow-color), var(--neon-glow);
+}
+
+.card-image {
+    position: relative;
+    height: 13rem;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.experience-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: var(--primary-color);
+    border-radius: 999px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+.card-body h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.card-location {
+    font-weight: 700;
+}
+
+/* pushes the footer to the bottom */
+.card-description {
+    flex: 1;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.card-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.no-results,
+.load-error {
+    max-width: 40rem;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
     text-align: center;
-    color: #00bb2d;
+    font-weight: 700;
 }
 
-.mycard .bottom-text .btn-card a:hover {
-    -webkit-transform: scale(.9);
-    -ms-transform: scale(.9);
-    transform: scale(.9);
-}
-
-@media screen and (min-width: 38.125em) {
-    .mycard {
-        max-width: 22.5rem;
+/* Tablet: 2 columns, filters in a row */
+@media (min-width: 37.5rem) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .mycard .top-text p .fa-arrow-circle-down {
-        font-size: 1.6rem;
+
+    .filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        padding: 1.5rem;
+    }
+
+    .filter-group {
+        flex: 1 1 14rem;
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 62rem) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

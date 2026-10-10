@@ -10,7 +10,7 @@
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.45)
         ),
-        url("/assets/images/saad-chaudhry-Xm5jDcBv_oE-unsplash.jpg") center / cover no-repeat;
+        url("/assets/images/saad-chaudhry-Xm5jDcBv_oE-unsplash.webp") center / cover no-repeat;
 
     color: var(--primary-bg-color);
 }
@@ -137,7 +137,7 @@
   font-size: .875em;
 }
 
-/* Desktop layout */
+/* Desktop: 60.563em (969px) and up */
 @media (min-width: 60.563rem) {
 
     /* show the 2 div in 2 column */

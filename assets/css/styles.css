@@ -302,7 +302,7 @@ footer small {
     text-align: center;
 }
 
-/* Desktop layout */
+/* Desktop: 56.25em (900px) and up */
 @media (min-width: 60.563rem) {
     /* Navbar */
     .navbar {

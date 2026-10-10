@@ -64,34 +64,53 @@
     </header>
 
     <main>
-        <article>
-            <section class="container-card">
-                <div class="mycard">
-                    <div class="img-card">
-                        <img src="./assets/images/thumbnails/castello-lancelotti-pinterest.jpg" alt="Lancellotti Castle" />
-                    </div>
-                    <div class="top-text">
-                        <div class="name">Lancellotti Castle</div>
-                        <p>Description <i class="fas fa-arrow-circle-down"></i></p>
-                    </div>
-                    <div class="bottom-text">
-                        <div class="text-card">
-                            Lancellotti Castle is the building that symbolized Lauro, not only for its artistic value but also for its history. Subsequently occupied by the Del Balzo di Avellino, the Orsini, the counts of Nola, the Pignatelli and finally the Marquis Lancellotti.
-                            In 1632 it was bought by the Lancellotti family, who still own the castle today. On April 30, 1799, French troops set the castle on fire. In the second half of the nineteenth century, Prince Filippo Lancellotti decided to rebuild
-                            the damaged manor in a variety of different styles: Renaissance, Baroque and Gothic.
-                        </div>
-                        <div class="btn-card" style="float: left;">
-                            <a href="https://www.progettostoriadellarte.it/2017/03/15/il-castello-lancellotti-di-lauro" target="_blank">Read more</a>
-                            <p>Italian Website</p>
-                        </div>
-                        <div class="btn-card" style="float: right;">
-                            <a href="https://www.google.com/maps/place/Lancellotti+Castle/@40.880567,14.6306593,17z/data=!3m1!4b1!4m5!3m4!1s0x133bb640fca285fb:0xc1a8a04f63c0e724!8m2!3d40.880563!4d14.6328533?hl=en" target="_blank">Map</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </article>
-    </main>
+    <!-- Page introduction -->
+    <section class="page-intro">
+        <p class="eyebrow">Explore More. Discover Ireland.</p>
+        <h2>Our Experiences</h2>
+        <p>Choose from city breaks, coastal adventures and countryside escapes across Ireland.</p>
+    </section>
+
+    <!-- Search and filter section -->
+    <section class="filters" aria-label="Filter experiences">
+        <!-- Text search -->
+        <div class="filter-group">
+            <label for="search-input">Search</label>
+            <input type="search" id="search-input" placeholder="Name, county or keyword...">
+        </div>
+
+        <!-- Category buttons (built to be toggled by experiences.js) -->
+        <div class="filter-group">
+            <span class="filter-label" id="category-label">Category</span>
+            <div class="category-buttons" role="group" aria-labelledby="category-label">
+                <button type="button" class="filter-btn active" data-category="All">All</button>
+                <button type="button" class="filter-btn" data-category="City">City</button>
+                <button type="button" class="filter-btn" data-category="Coastal">Coastal</button>
+                <button type="button" class="filter-btn" data-category="Countryside">Countryside</button>
+            </div>
+        </div>
+
+        <!-- Price range slider (min, max and value are set by experiences.js) -->
+        <div class="filter-group">
+            <label for="price-range">Maximum price: <output id="price-output">€0</output></label>
+            <input type="range" id="price-range" min="0" max="100" value="100" step="10">
+        </div>
+
+        <!-- Reset + results counter -->
+        <div class="filter-group filter-actions">
+            <button type="button" id="reset-filters" class="reset-btn">Reset filters</button>
+            <p id="results-count" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <!-- Cards are generated here from experiences.xml -->
+    <section id="experience-grid" class="card-grid" aria-label="Travel experiences"></section>
+
+    <!-- Shown when no card matches the filters -->
+    <p id="no-results" class="no-results hidden">
+        No experiences match your filters. Try a different category or a higher price.
+    </p>
+</main>
 
     <footer>
         <div class="row footer-social">
@@ -131,6 +150,7 @@
     <!-- scripts -->
     <script src="assets/scripts/navbar.js"></script>
     <script src="assets/scripts/darkmode.js"></script>
+    <script src="assets/scripts/experiences.js"></script>
 
 </body>
 </html>
