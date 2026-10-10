@@ -257,6 +257,16 @@ main {
     color: var(--secondary-color);
 }
 
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: .8em;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0 0 15px;
+}
+
 /* FOOTER */
 footer {
     width: 100%;

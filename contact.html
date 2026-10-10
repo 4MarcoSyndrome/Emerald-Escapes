@@ -7,6 +7,7 @@
     <title>Emerald Escapes</title>
     <script src="https://kit.fontawesome.com/5633e3451f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/contact.css"/>
 </head>
 <body>
     <header class="header">
@@ -61,11 +62,195 @@
         </nav>
     </header>
 
-    <main>
-        <article class="container-flex">
-            <section>
+    <main class="contact-page">
+        <section class="contact-hero">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>Let's plan your next escape.</h2>
+            <p>
+                Have a question or need help with a booking?
+                Get in touch and let us help you discover Ireland.
+            </p>
+        </section>
 
+        <article class="container-flex">
+
+            <!-- Contact information -->
+            <section class="contact-info"
+                     aria-labelledby="contact-info-heading">
+
+                <span class="contact-label">CONTACT INFORMATION</span>
+
+                <h2 id="contact-info-heading">
+                    We'd love to hear from you.
+                </h2>
+
+                <p class="contact-intro">
+                    Whether you're planning a weekend away or looking
+                    for your next Irish adventure, we're here to help.
+                    Send us your enquiry and let us know how we can assist.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-detail">
+                        <div class="detail-heading">
+                            <span class="detail-icon" aria-hidden="true">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <h3>Based in Ireland</h3>
+                        </div>
+                        <p>Dublin · Galway · Cork</p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="detail-heading">
+                            <span class="detail-icon" aria-hidden="true">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <h3>Email</h3>
+                        </div>
+                        <p>
+                            <a href="mailto:info@emeraldescapes.ie">
+                                info@emeraldescapes.ie
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="detail-heading">
+                            <span class="detail-icon" aria-hidden="true">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <h3>Phone</h3>
+                        </div>
+                        <p>
+                            <a href="tel:+35310000000">
+                                +353 (0)1 000 0000
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="contact-note">
+                    <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                    <p>
+                        Your next Irish adventure starts with a simple hello.
+                    </p>
+                </div>
             </section>
+
+            <!-- Contact and booking enquiry form -->
+            <section class="container-form"
+                     aria-labelledby="form-heading">
+
+                <div class="form-header">
+                    <span class="contact-label">SEND AN ENQUIRY</span>
+                    <h2 id="form-heading">Contact us</h2>
+                    <p>
+                        Fill in the form below and tell us how we can help.
+                        Fields marked with * are required.
+                    </p>
+                </div>
+
+                <form id="contact-form"
+                      action=""
+                      method="post">
+
+                    <div class="form-group">
+                        <label for="name">Full name *</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address *</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone number *</label>
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="phone"
+                            name="phone"
+                            placeholder="+353 83 123 4567"
+                            autocomplete="tel"
+                            required>
+                        <small class="field-hint">
+                            Include your country code if applicable.
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="query-type">Query type *</label>
+                        <select
+                            class="form-control"
+                            id="query-type"
+                            name="queryType"
+                            required>
+                            <option value="" selected disabled>
+                                Select your enquiry type
+                            </option>
+                            <option value="booking">Booking</option>
+                            <option value="payment">Payment</option>
+                            <option value="general">
+                                General Information
+                            </option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your message *</label>
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            name="message"
+                            rows="5"
+                            minlength="10"
+                            placeholder="Tell us about your enquiry..."
+                            required></textarea>
+                        <small class="field-hint">
+                            Please enter at least 10 characters.
+                        </small>
+                    </div>
+
+                    <!-- JavaScript will display validation feedback here -->
+                    <div id="form-feedback"
+                         class="form-feedback"
+                         role="status"
+                         aria-live="polite"
+                         tabindex="-1"
+                         hidden></div>
+
+                    <button type="submit" class="submit-button">
+                        Send enquiry
+                        <i class="fa-solid fa-arrow-right"
+                           aria-hidden="true"></i>
+                    </button>
+
+                    <p class="form-footer">
+                        We look forward to hearing from you.
+                    </p>
+
+                </form>
+            </section>
+
         </article>
     </main>
 
@@ -107,6 +292,7 @@
     <!-- scripts -->
     <script src="assets/scripts/navbar.js"></script>
     <script src="assets/scripts/darkmode.js"></script>
+    <script src="assets/scripts/contact.js"></script>
 
 </body>
 </html>

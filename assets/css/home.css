@@ -12,13 +12,15 @@
         ),
         url("/assets/images/saad-chaudhry-Xm5jDcBv_oE-unsplash.jpg") center / cover no-repeat;
 
-    color: #fff;
+    color: var(--primary-bg-color);
 }
 
 .hero-content {
     width: min(100%, 56.25rem);
     text-align: center;
+    color: #fff;
 }
+
 
 .hero-banner h2 {
     margin-bottom: 1rem;
@@ -58,23 +60,13 @@
     margin-bottom: 2rem;
 }
 
-.eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: .8em;
-    font-style: italic;
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin: 0 0 15px;
-}
-
 .section-heading h2 em {
     color: var(--primary-color);
     font-style: italic;
 }
 
 .intro-story {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .intro-story .text-link {
@@ -93,6 +85,10 @@
 }
 
 /* overview section */
+#overview > .section-heading {
+    padding:0 1.25rem;
+}
+
 .category-grid {
   max-width: 75rem;
   margin: 2rem;
@@ -104,6 +100,7 @@
 .container-card {
     justify-self: center;
     margin-bottom: 1.5rem;
+    min-width: 20rem;
 }
 
 .category-card {
